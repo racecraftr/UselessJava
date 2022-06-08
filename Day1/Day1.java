@@ -8,7 +8,7 @@ public class Day1 {
    public static final int NOTE_OFF = 0x80;
    private final double[] PITCHES = {30.868, 32.703, 36.708, 38.891, 41.203, 43.654, 46.249, 48.999, 51.913, 55, 58.27, 61.735};
    public void createNotes(String fileName) throws Exception{
-      Sequence sequence = MidiSystem.getSequence(new File(fileName));
+      Sequence sequence = MidiSystem.getSequence(new File(fileName).getAbsoluteFile());
       int trackNumber = 0;
       for (Track track :  sequence.getTracks()) {
          trackNumber++;
