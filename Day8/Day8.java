@@ -11,10 +11,9 @@ public class Day8 {
          String c = s.charAt(i) + "";
          /*
          count strokes. there are 4 different types of strokes:
-         long and short sticks (l)
          humps and bumps (u, n)
          doughnuts (0, O, o)
-         horizontal and diagonal lines (T, L, M, W)
+         straight lines (T, L, M, W)
          tails (J, j)
          
          each instance of these is a stroke.
