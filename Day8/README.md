@@ -1,7 +1,7 @@
 ## Day 8: Stroke counter
 Counts the number of strokes, holes, and dots in a string. 
 
-## What counts as a stroke?
+### What counts as a stroke?
 A stroke is the basic building block for a letter. There are 4 kinds of strokes:
 
 
@@ -15,9 +15,9 @@ Humps and bumps (like u and n)
   
   
 Tails (like j)
-## What counts as a hole? 
+### What counts as a hole? 
 A hole occurs when there is a doughnut present or when a line closes the open end of a hump/bump. 
-## What counts as a dot? 
+### What counts as a dot? 
 A dot is when the writing instrument is stamped to create a small mark. 
 
 
