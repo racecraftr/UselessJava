@@ -1,6 +1,9 @@
 ## Day 8: Stroke counter
 Counts the number of strokes, holes, and dots in a string. 
 
+
+Blog post: https://medium.com/@savim2020/useless-java-day-8-8eb9687f601c
+
 ### What counts as a stroke?
 A stroke is the basic building block for a letter. There are 4 kinds of strokes:
 
