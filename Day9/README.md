@@ -5,7 +5,7 @@ Just takes in a string and then hashes each hash of that string a certain number
 ### There are three formats you can enter in a string with:
 
 
-  1)<String_with_underscores_as_spaces> <integer>
+  1)<String_with_underscores_as_spaces> <integer_digits>
   
   
   2 String
