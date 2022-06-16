@@ -3,6 +3,9 @@ Just takes in a string and then hashes each hash of that string a certain number
 
 
 Blog Post: https://medium.com/@savim2020/useless-java-day-9-3df1271b0cad
+
+
+Youtube video with demo: https://youtu.be/sFHj01n4uc4
 ### There are three formats you can enter in a string with:
 
 
