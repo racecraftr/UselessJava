@@ -2,6 +2,7 @@ package UselessJava.Day9;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Scanner;
 
 public class Day9 {
    public String multiHash(String s, int times) throws NoSuchAlgorithmException{
@@ -20,6 +21,7 @@ public class Day9 {
               }
               res = sb.toString();
              System.out.println("iterations: " + i + ", result: "+ res);
+             Thread.sleep(350);
           } catch (Exception e) {
               e.printStackTrace();
           }
@@ -41,6 +43,12 @@ public class Day9 {
 class Main {
    public static void main(String[] args) throws NoSuchAlgorithmException {
       Day9 d = new Day9();
-      System.out.println(d.multiHash("hello_there 10"));
+      Scanner sc = new Scanner(System.in);
+      while (true){
+         System.out.println("Enter a string or else");
+         String s = sc.nextLine();
+         System.out.println(d.multiHash(s));
+         System.out.println();
+      }
    }
 }
