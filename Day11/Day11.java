@@ -13,10 +13,14 @@ public class Day11 {
    public String madLibs(String s, int num) throws IOException {
       String[] words = s.split("[ \\t\\n]");
       String res = "";
-      for(int i = 0; i < Math.max(num, 1); i++) {
+      for(int i = 0; i < Math.max(num, 1); i++) { //defines the amount of MadLibs sentences created. If num is less than 0, the sentence count defaults to 1. 
          for(String word : words) {
+           
+            //random noun: write <noun> or <n> in your string
             word = word.replaceAll("(<noun>|<n>)", getRandomLine(root + "nounList.txt"));
+            //random adverb: write <adverb> or <adv> in your string
             word = word.replaceAll("(<adverb>|<adv>)", getRandomLine(root + "adverbList.txt"));
+            //you probably get the idea
             word = word.replaceAll("(<adjective>|<adj>)", getRandomLine(root + "adjectiveList.txt"));
             word = word.replaceAll("(<plural noun>|<pnoun>|<pn>)", pluralizeNoun(getRandomLine(root + "nounList.txt")));
             
@@ -33,6 +37,8 @@ public class Day11 {
    }
    
    public String madLibs(String s) throws IOException {
+      //to create multiple instances of a madlibs, write your string, then add a tab followed by a number in square brackets. 
+      //for example: I hate <n> so much that I <v> it every night.   [10]
       if(s.matches("(.+\\t\\[\\d+])")) {
          String[] strings = s.split("\\t");
          String numString = strings[1].substring(1, strings[1].length() - 1);
