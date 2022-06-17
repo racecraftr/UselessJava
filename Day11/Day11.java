@@ -11,16 +11,21 @@ public class Day11 {
    final private String root = "/Users/avi/code/personalStuff/src/UselessJava/Day11/wordLists/";
    
    public String madLibs(String s, int num) throws IOException {
-      String[] words = s.split("[ \\t\\n]");
+      String[] words = s.split("[ \\t\\n]+");
       String res = "";
-      for(int i = 0; i < Math.max(num, 1); i++) { //defines the amount of MadLibs sentences created. If num is less than 0, the sentence count defaults to 1. 
+      for(int i = 0; i < Math.max(num, 1); i++) {
          for(String word : words) {
-           
-            //random noun: write <noun> or <n> in your string
+            /*
+            use the respective "syntax" to specify a word type.
+            <noun> or <n> is a random noun.
+            <adverb> or <adv> is a random adverb.
+            <pnoun> or <pn> is a random plural noun.
+            If you are every confused, just look at the regexes - they're the key. :D
+            
+            Try: madLibs("I want to <v> a <n> really badly, but Mom won't let me because it is \"too <adj>.\"", 10)
+             */
             word = word.replaceAll("(<noun>|<n>)", getRandomLine(root + "nounList.txt"));
-            //random adverb: write <adverb> or <adv> in your string
             word = word.replaceAll("(<adverb>|<adv>)", getRandomLine(root + "adverbList.txt"));
-            //you probably get the idea
             word = word.replaceAll("(<adjective>|<adj>)", getRandomLine(root + "adjectiveList.txt"));
             word = word.replaceAll("(<plural noun>|<pnoun>|<pn>)", pluralizeNoun(getRandomLine(root + "nounList.txt")));
             
@@ -37,9 +42,11 @@ public class Day11 {
    }
    
    public String madLibs(String s) throws IOException {
-      //to create multiple instances of a madlibs, write your string, then add a tab followed by a number in square brackets. 
-      //for example: I hate <n> so much that I <v> it every night.   [10]
-      if(s.matches("(.+\\t\\[\\d+])")) {
+      
+      //to specify multiple madLib instances in one line, write your string with a tab and a positive integer in square brackets. 
+      //example: I want to <v> a <n> really badly, but Mom won't let me because it is "too <adj>." [10]
+      
+      if(s.matches("(.+\\t+\\[\\d+])")) {
          String[] strings = s.split("\\t");
          String numString = strings[1].substring(1, strings[1].length() - 1);
          int num = Integer.parseInt(numString);
@@ -72,6 +79,16 @@ public class Day11 {
    
    private String pastTense(String verb) {
       //return the past tense of the verb
+      if(verb.equals("did") || verb.equals("was") || verb.equals("let")){
+         return verb;
+      }
+      if(verb.equals("bring")) return "brought";
+      if(verb.endsWith("buy")) return "bought";
+      if(verb.endsWith("ing")) return verb.substring(0, verb.length() - 3) + "ought";
+      if(verb.endsWith("ell")){
+         return verb.substring(0, verb.length() - 3) + "old";
+      }
+      
       if(verb.endsWith("ed")) return verb;
       if(verb.equals("be")) return "was";
       if(verb.equals("have")) return "had";
