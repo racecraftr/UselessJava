@@ -34,6 +34,9 @@ public class Day11 {
             word = word.replaceAll("(<present verb>|<psv>)", presentTense(getRandomLine(root + "verbList.txt")));
             word = word.replaceAll("(<past tense verb>|<ptv>)", pastTense(getRandomLine(root + "verbList.txt")));
             
+            //newline option :D
+            word = word.replaceAll("(<newline>|<nl>|\\\\n)", "\n");
+            
             res += word + " ";
          }
          res += "\n";
@@ -45,6 +48,9 @@ public class Day11 {
       
       //to specify multiple madLib instances in one line, write your string with a tab and a positive integer in square brackets. 
       //example: I want to <v> a <n> really badly, but Mom won't let me because it is "too <adj>." [10]
+      
+      //more formatting options :D
+      String s = string.replaceAll("(<tab>|<t>|\\\\t)", "\t");
       
       if(s.matches("(.+\\t+\\[\\d+])")) {
          String[] strings = s.split("\\t");
