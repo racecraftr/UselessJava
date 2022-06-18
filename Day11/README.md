@@ -2,6 +2,12 @@
 Creates funny sentences using real words. Grammar also taken into account :D
 
 
+Blog posst: https://medium.com/@savim2020/useless-java-day-11-10f6db52bce5
+
+
+Youtbe vid with demo: https://youtu.be/jExFvS_WKSA
+
+
 Link to gist: https://gist.github.com/racecraftr/474bd9df29dc06169a87c20ebda39239
 
 ### Word Sources
