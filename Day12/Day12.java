@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class Day12 {
    public String scared(String s){
-      s = s.trim().toUpperCase();
-      char c = s.charAt(0);
+      String[] strings = s.split("[ \\t\\n]");
       String res = "";
-      for(int i = 0; i < (int)(Math.random() * 20); i++) {
-         res += c + "-";
+      for(String string : strings) {
+         double n = Math.random();
+         if(n > 0.5){
+            for(int i = 0; i < (int)(Math.random() * 15); i++) {
+               res += string.charAt(0) + "-";
+            }
+         }
+         res += string + " ";
       }
-      res += s;
-      return res;
+      return  res;
    }
 }
 
