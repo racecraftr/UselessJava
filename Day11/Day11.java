@@ -50,7 +50,7 @@ public class Day11 {
       //example: I want to <v> a <n> really badly, but Mom won't let me because it is "too <adj>." [10]
       
       //more formatting options :D
-      String s = string.replaceAll("(<tab>|<t>|\\\\t)", "\t");
+      String string = s.replaceAll("(<tab>|<t>|\\\\t)", "\t");
       
       if(s.matches("(.+\\t+\\[\\d+])")) {
          String[] strings = s.split("\\t");
