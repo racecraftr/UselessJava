@@ -7,10 +7,14 @@ public class Day13 {
       if(x == 0) return "0";
       double n = Math.abs(x);
       long d = 1;
-      while(n != (long)n){
-         d*= 10;
-         n*= 10;
-      }
+      
+      //find number of decimal digits in number
+      String text = Double.toString(n);
+      int decimalDigits = text.length() - text.indexOf('.') - 1;
+      
+      d*= Math.pow(10, decimalDigits + 1);
+      n*= Math.pow(10, decimalDigits + 1);
+      
       long numerator = (long)n;
       long denominator = d;
       long gcd = gcd(numerator, denominator);
