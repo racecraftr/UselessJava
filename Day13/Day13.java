@@ -2,7 +2,8 @@ package UselessJava.Day13;
 
 public class Day13 {
    public String decimalToFraction(double x){
-      double n = x;
+      if(x == 0) return "0";
+      double n = Math.abs(x);
       long d = 1;
       while(n != (long)n){
          d*= 10;
@@ -13,6 +14,9 @@ public class Day13 {
       long gcd = gcd(numerator, denominator);
       numerator/= gcd;
       denominator/= gcd;
+      
+      if(x < 0) numerator *= -1;
+      
       if(denominator == 1) return numerator + "";
       return numerator + "/" + denominator;
    }
