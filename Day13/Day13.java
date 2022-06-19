@@ -1,5 +1,7 @@
 package UselessJava.Day13;
 
+import java.util.Scanner;
+
 public class Day13 {
    public String decimalToFraction(double x){
       if(x == 0) return "0";
@@ -29,13 +31,28 @@ public class Day13 {
 }
 
 class Main{
+   
+   private static boolean isADouble(String s){
+      //see if a string is a double.
+      try{
+         Double.parseDouble(s);
+         return true;
+      }catch(NumberFormatException e){
+          return false;
+      }
+   }
+   
    public static void main(String[] args) {
-      Day13 d = new Day13();
-      System.out.println(d.decimalToFraction(1.5));
-      System.out.println(d.decimalToFraction(15));
-      System.out.println(d.decimalToFraction(10.1));
-      System.out.println(d.decimalToFraction(1.3));
-      System.out.println(d.decimalToFraction(2.4));
-      System.out.println(d.decimalToFraction(1.625));
+      Scanner sc = new Scanner(System.in);
+      while (true){
+         System.out.println("Enter a number or not idk");
+         String s = sc.nextLine();
+         if(isADouble(s)){
+            System.out.println(new Day13().decimalToFraction(Double.parseDouble(s)));
+         }
+         else{
+            System.out.println("Not a double");
+         }
+      }
    }
 }
