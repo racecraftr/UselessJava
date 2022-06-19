@@ -24,9 +24,18 @@ public class Day13 {
    }
    
    private long gcd(long n, long d){
-      long gcf = 1;
-      if(d == 0) return n;
-      else return gcd(d, n % d);
+      long gcd = 1;
+      long x = Math.max(n, d);
+      for(int i = 2; i < Math.sqrt(x); i++) {
+         //if i is a factor of x, then x/i is a factor of x as well. So we can find the factors in O(sqrt(x)) time.
+         if(n % i == 0 && d % i == 0 && i > gcd) {
+            gcd = i;
+         }
+         if(n % (x/i) == 0 && d % (x/i) == 0 && (x/i) > gcd) {
+            gcd = x/i;
+         }
+      }
+      return gcd;
    }
 }
 
