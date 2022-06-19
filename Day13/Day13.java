@@ -51,7 +51,7 @@ class Main{
             System.out.println(new Day13().decimalToFraction(Double.parseDouble(s)));
          }
          else{
-            System.out.println("Not a double");
+            System.out.println(Double.NaN);
          }
       }
    }
