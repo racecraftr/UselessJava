@@ -32,7 +32,7 @@ public class Day13 {
             gcd = i;
          }
          if(n % (x/i) == 0 && d % (x/i) == 0 && (x/i) > gcd) {
-            gcd = x/i;
+            return x/i;
          }
       }
       return gcd;
