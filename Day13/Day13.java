@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Day13 {
    public String decimalToFraction(double x){
       if(x == 0) return "0";
+      if(x == (long)x) return Long.toString((long)x);
       double n = Math.abs(x);
       long d = 1;
       
@@ -12,8 +13,8 @@ public class Day13 {
       String text = Double.toString(n);
       int decimalDigits = text.length() - text.indexOf('.') - 1;
       
-      d*= Math.pow(10, decimalDigits + 1);
-      n*= Math.pow(10, decimalDigits + 1);
+      d*= Math.pow(10, decimalDigits);
+      n*= Math.pow(10, decimalDigits);
       
       long numerator = (long)n;
       long denominator = d;
@@ -22,8 +23,6 @@ public class Day13 {
       denominator/= gcd;
       
       if(x < 0) numerator *= -1;
-      
-      if(denominator == 1) return numerator + "";
       return numerator + "/" + denominator;
    }
    
@@ -32,9 +31,6 @@ public class Day13 {
       long x = Math.max(n, d);
       for(int i = 2; i < Math.sqrt(x); i++) {
          //if i is a factor of x, then x/i is a factor of x as well. So we can find the factors in O(sqrt(x)) time.
-         if(n % i == 0 && d % i == 0 && i > gcd) {
-            gcd = i;
-         }
          if(n % (x/i) == 0 && d % (x/i) == 0 && (x/i) > gcd) {
             return x/i;
          }
