@@ -10,10 +10,11 @@ public class Day14 {
    }
    
    private void quickSort(char[] chars){
-      quickSort(chars, 0, chars.length - 1);
+      quickSort(chars, 0, chars.length - 1, 0);
    }
    
-   private void quickSort(char[] chars, int start, int end){
+   private void quickSort(char[] chars, int start, int end, int iterations){
+      System.out.println("iterations: "+ iterations + "\tresult: " + String.valueOf(chars));
       if(start >= end) return;
       int pivot = chars[(start + end) / 2];
       int i = start, j = end;
@@ -28,9 +29,8 @@ public class Day14 {
             j--;
          }
       }
-      System.out.println(String.valueOf(chars));
-      quickSort(chars, start, j);
-      quickSort(chars, i, end);
+      quickSort(chars, start, j, iterations + 1);
+      quickSort(chars, i, end, iterations + 1);
    }
 }
 
