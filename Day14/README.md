@@ -3,3 +3,6 @@ Sorts a string, as well as showing the process of sorting it. Why? I don't know.
 
 
 Blog link: *https://medium.com/@savim2020/useless-java-day-14-66c12aaee71d*
+
+
+Youtube link: *https://youtu.be/zz7zJL1So1w*
