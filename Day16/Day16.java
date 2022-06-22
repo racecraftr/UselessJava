@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Day16 {
    public long sumOfString(String s){
       long sum = 0;
-      String digits = s.replaceAll("\\D", "");
-      for(int i = 0; i < digits.length(); i++) {
-         sum += (digits.charAt(i) - 48);
+      String[] strings = s.split("\\D");
+      for(String string : strings) {
+         long n = Long.parseLong(string);
+         sum += n;
       }
       return sum;
    }
