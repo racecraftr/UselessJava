@@ -7,8 +7,10 @@ public class Day16 {
       long sum = 0;
       String[] strings = s.split("\\D");
       for(String string : strings) {
-         long n = Long.parseLong(string);
-         sum += n;
+         if(string.length() > 0) {
+            long n = Long.parseLong(string);
+            sum += n;
+         }
       }
       return sum;
    }
