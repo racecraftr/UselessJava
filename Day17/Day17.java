@@ -13,7 +13,7 @@ public class Day17 {
       String s = "";
       for(int i = 0; i < height; i++) {
          for(int j = 0; j < width; j++) {
-            s += chars[(i + j) % 2];
+            s += chars[(i + j) % chars.length];
          }
          s += "\n";
       }
