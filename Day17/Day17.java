@@ -4,10 +4,15 @@ import java.util.Scanner;
 
 public class Day17 {
    public String generateCheckerboard(int size){
+      return generateCheckerboard(size, size);
+   }
+   
+   
+   public String generateCheckerboard(int width, int height){
       char[] chars = new char[]{'⬜','⬛'};
       String s = "";
-      for(int i = 0; i < size; i++) {
-         for(int j = 0; j < size; j++) {
+      for(int i = 0; i < height; i++) {
+         for(int j = 0; j < width; j++) {
             s += chars[(i + j) % 2];
          }
          s += "\n";
@@ -24,6 +29,13 @@ class Main{
       while(true){
          System.out.println("Enter an integer.");
          String s = sc.nextLine();
+         if(s.matches("\\d+ *, *\\d+")){
+            String[] strings = s.split(",");
+            int width = Integer.parseInt(strings[0].trim());
+            int height = Integer.parseInt(strings[1].trim());
+            System.out.println(d.generateCheckerboard(width, height));
+            continue;
+         }
          try{
             int size = Integer.parseInt(s);
             System.out.println(d.generateCheckerboard(size));
