@@ -9,6 +9,15 @@ public class Day17 {
    
    
    public String generateCheckerboard(int width, int height){
+      //More designs include:
+      /*
+      Rainbows: "🟥🟧🟨🟩🟦🟪".toCharArray()
+      Anarchist: "dasfkljadklf jadslkcj sadl cjsldjf".toCharArray()
+      Amogus: "🌌ඞ".toCharArray()
+      Void: {` `}
+      XO: "xo".toCharArray()
+      add more if you want :D
+       */
       char[] chars = new char[]{'⬜','⬛'};
       String s = "";
       for(int i = 0; i < height; i++) {
