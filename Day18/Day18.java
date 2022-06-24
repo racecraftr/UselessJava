@@ -14,7 +14,7 @@ public class Day18 {
          while(true) {
             try {
                System.out.println(comments[(int) (Math.random() * comments.length)]);
-               Thread.sleep(200);
+               Thread.sleep(3000);
             }
             catch(InterruptedException e) {
                throw new RuntimeException(e);
