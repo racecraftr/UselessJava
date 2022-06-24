@@ -1,3 +1,3 @@
 ## Day 18: Cosmic Ray detector.
 Detects a cosmic ray.
-**Based off of [a reddit post by u/TripplerX.](https://www.reddit.com/r/ProgrammerHumor/comments/vj656b/my_cosmic_ray_detector_function_just_7_lines/ "The original inspiration")
+**Based off of [a reddit post by u/TripplerX.](https://www.reddit.com/r/ProgrammerHumor/comments/vj656b/my_cosmic_ray_detector_function_just_7_lines/ "The original inspiration")**
