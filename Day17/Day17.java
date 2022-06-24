@@ -11,14 +11,15 @@ public class Day17 {
    public String generateCheckerboard(int width, int height){
       //More designs include:
       /*
-      Rainbows: "🟥🟧🟨🟩🟦🟪".toCharArray()
+      Default: new String[]{"⬜","⬛"};
+      Rainbows: new String[] {'🟥','🟧','🟨','🟩','🟦','🟪'}
       Anarchist: "dasfkljadklf jadslkcj sadl cjsldjf".toCharArray()
-      Amogus: "🌌ඞ".toCharArray()
-      Void: {` `}
-      XO: "xo".toCharArray()
+      Amogus: "🌌ඞ".split("")
+      Void: new String[] {" "}
+      XO: new String[] {"x", "o"}
       add more if you want :D
        */
-      char[] chars = new char[]{'⬜','⬛'};
+      String[] chars = new String[] {"🟥","🟧","🟨","🟩","🟦","🟪"};
       String s = "";
       for(int i = 0; i < height; i++) {
          for(int j = 0; j < width; j++) {
