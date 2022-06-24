@@ -12,7 +12,7 @@ public class Day17 {
       //More designs include:
       /*
       Default: new String[]{"⬜","⬛"};
-      Rainbows: new String[] {'🟥','🟧','🟨','🟩','🟦','🟪'}
+      Rainbows: new String[] {"🟥","🟧","🟨","🟩","🟦","🟪"}
       Anarchist: "dasfkljadklf jadslkcj sadl cjsldjf".toCharArray()
       Amogus: "🌌ඞ".split("")
       Void: new String[] {" "}
