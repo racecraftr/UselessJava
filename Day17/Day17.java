@@ -13,7 +13,7 @@ public class Day17 {
       /*
       Default: new String[]{"⬜","⬛"};
       Rainbows: new String[] {"🟥","🟧","🟨","🟩","🟦","🟪"}
-      Anarchist: "dasfkljadklf jadslkcj sadl cjsldjf".toCharArray()
+      Anarchist: "dasfkljadklf jadslkcj sadl cjsldjf".split("");
       Amogus: "🌌ඞ".split("")
       Void: new String[] {" "}
       XO: new String[] {"x", "o"}
