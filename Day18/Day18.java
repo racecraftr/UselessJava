@@ -11,9 +11,9 @@ public class Day18 {
                                 "???",
                                  "Why are we still here... just to suffer..."};
       Thread t = new Thread(() -> {
-         System.out.println(comments[(int) (Math.random() * comments.length)]);
          while(true) {
             try {
+               System.out.println(comments[(int) (Math.random() * comments.length)]);
                Thread.sleep(200);
             }
             catch(InterruptedException e) {
