@@ -10,13 +10,15 @@ public class Day18 {
                                 "The cheese stands alone, so sad :(",
                                 "???",
                                  "Why are we still here... just to suffer..."};
-      Thread t = new Thread(() ->{
-         System.out.println(comments[(int)(Math.random() * comments.length)]);
-         try {
-            Thread.sleep(200);
-         }
-         catch(InterruptedException e) {
-            throw new RuntimeException(e);
+      Thread t = new Thread(() -> {
+         System.out.println(comments[(int) (Math.random() * comments.length)]);
+         while(true) {
+            try {
+               Thread.sleep(200);
+            }
+            catch(InterruptedException e) {
+               throw new RuntimeException(e);
+            }
          }
       }
       );
