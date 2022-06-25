@@ -3,7 +3,7 @@ package UselessJava.Day19
 import java.util.*
 
 class Day19K() {
-    val moveArray = "U U2 D D2 L L2 R R2 F F2 B B2 U' D' L' R' F' B' x y z M E S r r2 f f2 b b2 r' f' b'".split(" ");
+    val moveArray = "U U2 D D2 L L2 R R2 F F2 B B2 U' D' L' R' F' B' x y z M E S x' y' z' M' E' S' r r2 f f2 b b2 r' f' b'".split(" ");
     fun createScrambleSequence(moves: Int): String{
         var res = ""
         for (i in 0 until moves){
