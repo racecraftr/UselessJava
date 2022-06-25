@@ -10,6 +10,7 @@ public class Day19 {
       for(int i = 0; i < moves; i++) {
          res += moveArray[(int)(Math.random() * moveArray.length)];
          res += addons[(int)(Math.random() * addons.length)];
+         res += " ";
       }
       return res;
    }
