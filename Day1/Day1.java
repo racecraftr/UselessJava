@@ -44,7 +44,7 @@ public class Day1 {
    
    public void playFile(String fileName) throws Exception{
       //play a midi file
-      Sequence sequence = MidiSystem.getSequence(new File(fileName).getAbsoluteFile());
+      Sequence sequence = MidiSystem.getSequence(new File(new File(fileName).getAbsolutePath()));
       Sequencer sequencer = MidiSystem.getSequencer();
       sequencer.open();
       sequencer.setSequence(sequence);
@@ -56,7 +56,7 @@ class Main{
    
    //get file from relative path
    
-   private static final String fileName ="/UselessJava/Day1/midiFiles/skrillex-scary_monsters_and_nice_sprites.midi";
+   private static final String fileName ="./Day1/midiFiles/skrillex-scary_monsters_and_nice_sprites.midi";
    
    
    public static void main(String[] args) throws Exception {

@@ -49,7 +49,7 @@ class Day1K {
     @Throws(Exception::class)
     fun playFile(fileName: String?) {
         //play a midi file
-        val sequence = MidiSystem.getSequence(fileName?.let { File(it).absoluteFile })
+        val sequence = MidiSystem.getSequence(fileName?.let { File(it).absolutePath }?.let { File(it) })
         val sequencer = MidiSystem.getSequencer()
         sequencer.open()
         sequencer.sequence = sequence
@@ -57,7 +57,7 @@ class Day1K {
     }
 }
 
-private val fileName = "/UselessJava/Day1/midiFiles/skrillex-scary_monsters_and_nice_sprites.midi"
+private val fileName = "./Day1/midiFiles/skrillex-scary_monsters_and_nice_sprites.midi"
 
 @Throws(Exception::class)
 fun main() {
