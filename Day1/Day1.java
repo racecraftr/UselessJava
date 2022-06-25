@@ -1,7 +1,7 @@
 package UselessJava.Day1;
 
-import java.io.File;
 import javax.sound.midi.*;
+import java.io.File;
 
 public class Day1 {
    public static final int NOTE_ON = 0x90;
@@ -56,7 +56,7 @@ class Main{
    
    //get file from relative path
    
-   private static final String fileName ="src/UselessJava/Day1/midiFiles/skrillex-scary_monsters_and_nice_sprites.midi";
+   private static final String fileName ="/UselessJava/Day1/midiFiles/skrillex-scary_monsters_and_nice_sprites.midi";
    
    
    public static void main(String[] args) throws Exception {
