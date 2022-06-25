@@ -37,6 +37,7 @@ class Main{
    static String[] files = new String[]{"test-1.jpeg"}; //array to store image names for quick and easy access to different images
    
    public static void main(String[] args) throws IOException {
-      Day7 day7 = new Day7();System.out.println(day7.averageColor(root + files[0]));
+      Day7 day7 = new Day7();
+      System.out.println(day7.averageColor(root + files[0]));
    }
 }
