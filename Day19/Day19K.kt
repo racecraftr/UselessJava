@@ -10,6 +10,7 @@ class Day19K() {
         for (i in 0 until moves){
             res += moveArray[(Math.random() * moveArray.size).toInt()];
             res += addons[(Math.random() * addons.size).toInt()];
+            res += " "
         }
         return res
     }
