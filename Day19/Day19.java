@@ -3,11 +3,13 @@ package UselessJava.Day19;
 import java.util.Scanner;
 
 public class Day19 {
-   final String[] moveArray = "U U2 D D2 L L2 R R2 F F2 B B2 U' D' L' R' F' B' x y z M E S x' y' z' M' E' S' r r2 f f2 b b2 r' f' b'".split(" ");
+   final String[] moveArray = "U D L R F B x y z M E S u d l r f b".split(" ");
+   final String[] addons = " 2 '".split(" ");
    public String createScrambleSequence(int moves) {
       String res = "";
       for(int i = 0; i < moves; i++) {
-         res += moveArray[(int)(Math.random() * moveArray.length)] + " ";
+         res += moveArray[(int)(Math.random() * moveArray.length)];
+         res += addons[(int)(Math.random() * addons.length)];
       }
       return res;
    }
