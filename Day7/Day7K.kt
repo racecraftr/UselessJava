@@ -29,7 +29,7 @@ class Day7K {
     }
 }
 
-var root = "/Users/avi/code/personalStuff/src/UselessJava/Day7/testImages/" //absolute root path to folder containing images
+var root = "/Users/avi/code/personalStuff/UselessJava/Day7/testImages/" //absolute root path to folder containing images
 
 var files = arrayOf("test-1.jpeg") //array to store image names for quick and easy access to different images
 

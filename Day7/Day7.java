@@ -33,7 +33,7 @@ public class Day7 {
 
 class Main{
    
-   static String root = "/Users/avi/code/personalStuff/src/UselessJava/Day7/testImages/"; //absolute root path to folder containing images
+   static String root = "/Users/avi/code/personalStuff/UselessJava/Day7/testImages/"; //absolute root path to folder containing images
    static String[] files = new String[]{"test-1.jpeg"}; //array to store image names for quick and easy access to different images
    
    public static void main(String[] args) throws IOException {
