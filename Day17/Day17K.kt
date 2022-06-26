@@ -1,5 +1,7 @@
 package UselessJava.Day17
 
+import java.util.*
+
 class Day17K {
     fun generateCheckerboard(size: Int): String? {
         return generateCheckerboard(size, size)
@@ -26,5 +28,27 @@ class Day17K {
             s += "\n"
         }
         return s
+    }
+}
+
+fun main(){
+    val d = Day17()
+    val sc = Scanner(System.`in`)
+    while (true) {
+        println("Enter an integer.")
+        val s = sc.nextLine()
+        if (s.matches(Regex("\\d+ *, *\\d+"))) {
+            val strings = s.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+            val width = strings[0].trim { it <= ' ' }.toInt()
+            val height = strings[1].trim { it <= ' ' }.toInt()
+            println(d.generateCheckerboard(width, height))
+            continue
+        }
+        try {
+            val size = s.toInt()
+            println(d.generateCheckerboard(size))
+        } catch (e: NumberFormatException) {
+            println(Double.NaN)
+        }
     }
 }
