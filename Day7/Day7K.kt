@@ -36,6 +36,6 @@ var files = arrayOf("test-1.jpeg") //array to store image names for quick and ea
 
 @Throws(IOException::class)
 fun main(args: Array<String>) {
-    val day7 = Day7()
+    val day7 = Day7K()
     println(day7.averageColor(root + files[0]))
 }
