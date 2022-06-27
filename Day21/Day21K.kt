@@ -43,7 +43,7 @@ class Day21K {
 }
 
 fun main(args: Array<String>) {
-    val d = Day21()
+    val d = Day21K()
     val sc = Scanner(System.`in`)
     while (true) {
         println("Enter a positive number")

@@ -32,6 +32,6 @@ class Day18K {
 }
 
 fun main(args: Array<String>) {
-    val d = Day18()
+    val d = Day18K()
     println(d.detectCosmicRay())
 }

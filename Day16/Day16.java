@@ -18,7 +18,7 @@ public class Day16 {
 
 class Main{
    public static void main(String[] args) {
-      Day16 d = new Day16();
+      Day16 d = new Day16K();
       Scanner sc = new Scanner(System.in);
       while(true){
          System.out.println("Enter a string");

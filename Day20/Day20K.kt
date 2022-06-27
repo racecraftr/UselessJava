@@ -53,7 +53,7 @@ class Day20K {
 }
 
 fun main(args: Array<String>) {
-    val d = Day20()
+    val d = Day20K()
     val sc = Scanner(System.`in`)
     while (true) {
         println("Enter a number.")
