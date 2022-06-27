@@ -10,11 +10,7 @@ public class Day21 {
       if(x == 0) {
          return 0;
       }
-      float low = 0, high = x, mid = 0, i = 0;
-      if(x < 1){
-         low = x;
-         high = 1;
-      }
+      float low = Math.min(1, x), high = Math.max(1, x), mid = 0, i = 0;
       while(i < 25){
          mid = (low + high)/2;
          if(mid * mid == x) {

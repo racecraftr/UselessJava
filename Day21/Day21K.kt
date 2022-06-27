@@ -10,14 +10,11 @@ class Day21K {
         if (x == 0f) {
             return 0f
         }
-        var low = 0f
-        var high = x
+        var low = Math.min(1f, x)
+        var high = Math.max(1f, x)
         var mid = 0f
         var i = 0f
-        if (x < 1) {
-            low = x
-            high = 1f
-        }
+
         while (i < 25) {
             mid = (low + high) / 2
             if (mid * mid == x) {
