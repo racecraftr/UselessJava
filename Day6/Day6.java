@@ -49,7 +49,7 @@ class Main{
    This contains over 450,000 words, so there may be some strange words you may not recognize.
     */
    
-   static String dictionaryFile = "Enter Absolute Path of dictionary file here";
+   static String dictionaryFile = "./Day6/allWordsInDictionary.txt";
    
    public static void main(String[] args) {
       Day6 d = new Day6(dictionaryFile);

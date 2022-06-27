@@ -41,7 +41,7 @@ class Day6K() {
    Dictionary file (allWordsInDictionary.txt) from https://github.com/dwyl/english-words.
    This contains over 450,000 words, so there may be some strange words you may not recognize.
     */
-var dictionaryFile = "Enter Absolute Path of dictionary file here"
+var dictionaryFile = "./Day6/allWordsInDictionary.txt"
 
 fun main(args: Array<String>) {
     val d = Day6K(dictionaryFile)
