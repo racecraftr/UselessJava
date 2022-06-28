@@ -33,7 +33,7 @@ class Day22K {
         }
         return if (s.matches (Regex("\\d+"))) {
             hackerBackground(s.toLong(), 8)
-        } else java.lang.Double.toString(Double.NaN)
+        } else Double.NaN.toString()
     }
 }
 
