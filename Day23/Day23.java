@@ -9,7 +9,7 @@ public class Day23 {
       color = color.replaceAll("[ \\t]", "");
       if(color.matches("#*[\\da-f]{6}")){
          color = color.replaceAll("#", "");
-         int s = (0xFFFFFF ^ Integer.parseInt(color, 16));
+         int s = (0xFFFFFF - Integer.parseInt(color, 16));
          return "#" + String.format("%06X", s);
       }
       if(color.matches("\\(\\d{1,3},\\d{1,3},\\d{1,3}\\)")){

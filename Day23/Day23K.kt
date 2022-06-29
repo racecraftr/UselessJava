@@ -9,7 +9,7 @@ class Day23K {
         color = color.replace("[ \\t]".toRegex(), "")
         if (color.matches(Regex("#*[\\da-f]{6}"))) {
             color = color.replace("#".toRegex(), "")
-            val s = 0xFFFFFF xor color.toInt(16)
+            val s = 0xFFFFFF - color.toInt(16)
             return "#" + String.format("%06X", s)
         }
         if (color.matches(Regex("\\(\\d{1,3},\\d{1,3},\\d{1,3}\\)"))) {
