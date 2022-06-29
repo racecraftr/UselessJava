@@ -6,18 +6,10 @@ class Day22K {
     fun hackerBackground(length: Long, magnitude: Long): String? {
         var res = ""
         for (i in 0 until length) {
-            val n = (Math.pow(2.0, (magnitude - 1).toDouble()) + Math.random() * Math.pow(
-                2.0,
-                (magnitude - 1).toDouble()
-            )).toLong()
-            var s = java.lang.Long.toBinaryString(n)
-            if (Math.random() >= 0.5) {
-                s = "0" + s.substring(1)
+            for (j in 0 until magnitude) {
+                res += (Math.random() * 2).toInt()
             }
-            res += """
-            $s
-            
-            """.trimIndent()
+            res += "\n"
         }
         return res
     }

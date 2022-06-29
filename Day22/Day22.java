@@ -6,12 +6,10 @@ public class Day22 {
    public String hackerBackground(long length, long magnitude){
       String res = "";
       for(int i = 0; i < length; i++) {
-         long n = (long)(Math.pow(2, magnitude - 1) + Math.random()*Math.pow(2, magnitude -1));
-         String s = Long.toBinaryString(n);
-         if(Math.random() >= 0.5){
-            s = "0" + s.substring(1);
+         for(int j = 0; j < magnitude; j++) {
+            res += (int)(Math.random() * 2);
          }
-         res += s + "\n";
+         res += "\n";
       }
       return res;
    }
