@@ -18,8 +18,8 @@ class Day23K {
             val ints = IntArray(strings.size)
             for (i in strings.indices) {
                 val n = strings[i].toInt()
-                if (n > 255 || n < 0) return "Not a valid color"
-                ints[i] = 255 - n
+                if (n > 0xFF || n < 0) return "Not a valid color"
+                ints[i] = 0xFF - n
             }
             return "(" + ints[0] + ", " + ints[1] + ", " + ints[2] + ")"
         }

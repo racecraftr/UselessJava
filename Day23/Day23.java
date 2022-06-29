@@ -18,8 +18,8 @@ public class Day23 {
          int[] ints = new int[strings.length];
          for(int i = 0; i < strings.length; i++) {
             int n = Integer.parseInt(strings[i]);
-            if(n > 255 || n < 0) return "Not a valid color";
-            ints[i] = 255 - n;
+            if(n > 0xFF || n < 0) return "Not a valid color";
+            ints[i] = 0xFF - n;
          }
          return "(" + ints[0] + ", " + ints[1] + ", " + ints[2] + ")";
       }
