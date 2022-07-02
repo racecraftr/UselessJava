@@ -8,8 +8,8 @@ class Day25K {
         val lon = charArrayOf('E', 'W')
         val latitude = Math.random() * 90
         val longitude = Math.random() * 180
-        val latString = toDMS(latitude) + lat[Math.random().toInt()]
-        val longString = toDMS(longitude) + lon[Math.random().toInt()]
+        val latString = toDMS(latitude) + lat[(Math.random() * 2).toInt()]
+        val longString = toDMS(longitude) + lon[(Math.random() * 2).toInt()]
         return "$latString $longString"
     }
 
