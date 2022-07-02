@@ -9,8 +9,8 @@ public class Day25 {
         double latitude = Math.random() * 90;
         double longitude = Math.random() * 180;
         
-        String latString =  toDMS(latitude) + lat[(int)(Math.random())];
-        String longString = toDMS(longitude) + lon[(int)(Math.random())];
+        String latString =  toDMS(latitude) + lat[(int)(Math.random() * 2)];
+        String longString = toDMS(longitude) + lon[(int)(Math.random() * 2)];
         return latString + " " + longString;
     }
     
