@@ -35,7 +35,7 @@ class Main{
         Day26 d = new Day26();
         Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.println("Pride month is over, enter a color");
+            System.out.println("Enter a color");
             String s = sc.nextLine();
             System.out.println(d.makeGreyscale(s) + "\n");
         }

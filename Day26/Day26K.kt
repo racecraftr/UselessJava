@@ -34,7 +34,7 @@ fun main(){
     val d = Day26K()
     val sc = Scanner(System.`in`)
     while (true) {
-        println("Pride month is over, enter a color")
+        println("Enter a color")
         val s = sc.nextLine()
         println(
             """
