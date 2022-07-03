@@ -13,6 +13,11 @@ class Day26K {
             val r = hexcode and 0xFF0000 shr 16
             val g = hexcode and 0x00FF00 shr 8
             val b = hexcode and 0x0000FF
+
+            if (r == g && g == b) {
+                return "#" + Integer.toHexString(hexcode)
+            }
+
             val brightness = Integer.toHexString((0.299 * r + 0.597 * g + 0.114 * b).toInt())
             return "#$brightness$brightness$brightness"
         }

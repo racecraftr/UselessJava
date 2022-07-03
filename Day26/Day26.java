@@ -13,6 +13,10 @@ public class Day26 {
             int g = (hexcode & 0x00FF00) >> 8;
             int b = (hexcode & 0x0000FF);
             
+            if(r == g && g == b){
+                return "#" + Integer.toHexString(hexcode);
+            }
+            
             String brightness = Integer.toHexString ((int)(0.299 * r + 0.597 * g + 0.114 * b));
             return  "#" + brightness + brightness + brightness;
         }
