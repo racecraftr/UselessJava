@@ -6,6 +6,7 @@ class Day26K {
     fun makeGreyscale(s: String): String? {
         var s = s
         s = s.replace("[ \\t#]".toRegex(), "")
+        s = s.lowercase();
         //is s a hex code?
         if (s.matches(Regex("[\\da-f]{6}"))) {
             val hexcode = s.toInt(16)

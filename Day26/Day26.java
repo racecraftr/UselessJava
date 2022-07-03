@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Day26 {
     public String makeGreyscale(String s){
         s = s.replaceAll("[ \\t#]", "");
+        s  = s.toLowerCase();
         //is s a hex code?
         if(s.matches("[\\da-f]{6}")){
             int hexcode = Integer.parseInt(s, 16);
