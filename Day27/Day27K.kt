@@ -1,21 +1,32 @@
 package UselessJava.Day27
 
+import java.io.IOException
+import java.nio.file.Files
+import java.nio.file.Paths
 import java.util.*
 
 class Day27K {
     fun what(): String? {
-        val strings =
-            "if and but so for it to by go get you have has is be ever".split(" ".toRegex()).dropLastWhile { it.isEmpty() }
-                .toTypedArray()
         val punctuation = ". ? ! ,".split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-        var res = ""
+        var res: String? = ""
         for (i in 0 until (Math.random() * 100).toInt()) {
-            res += strings[(Math.random() * strings.size).toInt()]
+            res += getRandomLine()
             val punc = (Math.random() * punctuation.size * 3).toInt()
             if (punc < punctuation.size) res += punctuation[punc]
             res += " "
         }
         return res
+    }
+
+    private fun getRandomLine(): String? {
+        val lines: ArrayList<String> = try {
+            Files.readAllLines(Paths.get("./Day27/words.txt")) as ArrayList<String>
+        } catch (e: IOException) {
+            e.printStackTrace()
+            return ""
+        }
+        val random = Random()
+        return lines[random.nextInt(lines.size)]
     }
 }
 //have to keep main method outside kotlin class lol :(

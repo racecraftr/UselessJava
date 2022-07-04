@@ -1,19 +1,37 @@
 package UselessJava.Day27;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Day27 {
     public String what (){
-        String[] strings = "if and but so for it to by go get you have has is be ever".split(" ");
         String[] punctuation = ". ? ! ,".split(" ");
         String res = "";
         for(int i = 0; i < (int)(Math.random() * 100); i++) {
-            res += strings[(int)(Math.random() * strings.length)];
+            res += getRandomLine();
             int punc = (int)(Math.random() * punctuation.length * 3);
             if(punc < punctuation.length) res += punctuation[punc];
             res += " ";
         }
         return  res;
+    }
+    
+    private String getRandomLine() {
+        ArrayList<String> lines;
+        try {
+            lines = (ArrayList<String>) Files.readAllLines(Paths.get("./Day27/words.txt"));
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+            return "";
+        }
+    
+        Random random = new Random();
+        return lines.get(random.nextInt(lines.size()));
     }
     
     //i'm going to put the main method inside the class to make things easier from now on. Only took 27 days to do lol
