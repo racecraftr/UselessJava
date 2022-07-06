@@ -18,13 +18,17 @@ public class Day3 {
    }
    
    
-   public String determineType(String s) throws NumberFormatException{
-      if(!s.matches("-*\\d+(\\.\\d+)*")) return "NaN";
-      double n = Double.parseDouble(s);
-      if((long) (n) == n) {
-         return "" + (long) n + " is of type " + determineType(n);
+   public String determineType(String s) throws NumberFormatException {
+      try {
+         double n = Double.parseDouble(s);
+         if((long) (n) == n) {
+            return determineType(n);
+         }
+         return determineType(n);
+      } catch(Exception e) {
+         if(s.length() == 1) return "char";
+         return "String";
       }
-      return "" + n + " is of type " + determineType(n);
    }
 }
 
