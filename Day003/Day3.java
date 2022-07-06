@@ -19,7 +19,7 @@ public class Day3 {
    
    
    public String determineType(String s) throws NumberFormatException{
-      if(!s.matches("-*\\d+(\\.\\d+)*")) return Double.NaN + "";
+      if(!s.matches("-*\\d+(\\.\\d+)*")) return "NaN";
       double n = Double.parseDouble(s);
       if((long) (n) == n) {
          return "" + (long) n + " is of type " + determineType(n);
