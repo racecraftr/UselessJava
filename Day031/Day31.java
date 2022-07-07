@@ -2,45 +2,64 @@ package UselessJava.Day031;
 
 import UselessJava.Day003.Day3;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.Hashtable;
 import java.util.Scanner;
 
 public class Day31 {
     
     final Day3 determiner = new Day3(); // meta-uselessness
-    final List<String> types = Arrays.asList(
-            "boolean",
-            "byte",
-            "short",
-            "int",
-            //instead of making the code better, I am telling everyone to accept this:
-            //all chars are ints and all ints are chars. Deal with it.
-            //Therefore, chars take higher priority than ints, but lower priorities than longs. easy peasy
-            //"But racecraftr, chars are bytes?" Then why do we have emoticons? checkmate :)
-            
-            //because all chars are ints, then all chars are - by definition - longs, floats, doubles, and strings.
-            //live with it lol
-            "char",
-            "long",
-            "float",
-            "double",
-            "String"
-                                            );
+    
+    final Hashtable<String, Integer> typeTable = new Hashtable<>();
+    
+    public Day31(){
+        typeTable.put("boolean", 0);
+        typeTable.put("byte", 0);
+        typeTable.put("short", 0);
+        typeTable.put("int", 0);
+        typeTable.put("long", 0);
+        typeTable.put("float", 0);
+        typeTable.put("double", 0);
+        typeTable.put("unsigned_byte", 0);
+        typeTable.put("unsigned_short", 0);
+        typeTable.put("unsigned_int", 0);
+        typeTable.put("unsigned_long", 0);
+        typeTable.put("unsigned_float", 0);
+        typeTable.put("unsigned_double", 0);
+        typeTable.put("char", 0);
+        typeTable.put("String", 0);
+    }
     
     public String arrayType(String s){
-        int magnitude = 0;
+        String finalType = null;
         s = s.trim();
-        s = s.replaceAll(",[ \\t]+", "");
+        s = s.replaceAll(",[ \\t]+", ",");
         s = s.replaceAll("(^\\[|^\\(|\\]$|\\)$)", "");
+        boolean hasSigned = false;
         String[] strings = s.split(",");
         for(String str : strings) {
-            if(types.contains(determiner.determineType(str))) {
-                magnitude = Math.max(magnitude,
-                                     types.indexOf(determiner.determineType(str)));
-            }
+            String type = determiner.determineType(str);
+            typeTable.put(type, typeTable.get(type) + 1);
+            if(!type.startsWith("unsigned_") && !type.equals("char") && !type.equals("boolean")) hasSigned = true;
+            if(type.equals("String")) return "String";
         }
-        return types.get(magnitude);
+        if(!hasSigned){
+            if(typeTable.get("boolean") > 0){finalType = "boolean";}
+            if(typeTable.get("unsigned_byte") > 0){finalType = "unsigned_byte";}
+            if(typeTable.get("unsigned_short") > 0){finalType = "unsigned_short";}
+            if(typeTable.get("unsigned_int") > 0){finalType = "unsigned_int";}
+            if(typeTable.get("char") > 0){finalType = "char";}
+            if(typeTable.get("unsigned_long") > 0){finalType = "unsigned_long";}
+            if(typeTable.get("unsigned_float") > 0){finalType = "unsigned_float";}
+            if(typeTable.get("unsigned_double") > 0){finalType = "unsigned_double";}
+            return finalType;
+        }
+        if(typeTable.get("byte") > 0 || typeTable.get("unsigned_byte") > 0){finalType = "byte";}
+        if(typeTable.get("short") > 0 || typeTable.get("unsigned_short") > 0){finalType = "short";}
+        if(typeTable.get("int") > 0 || typeTable.get("unsigned_int") > 0 || typeTable.get("char") > 0){finalType = "int";}
+        if(typeTable.get("long") > 0 || typeTable.get("unsigned_long") > 0){finalType = "long";}
+        if(typeTable.get("float") > 0 || typeTable.get("unsigned_float") > 0){finalType = "float";}
+        if(typeTable.get("double") > 0 || typeTable.get("unsigned_double") > 0){finalType = "double";}
+        return finalType;
     }
     
     public static void main(String[] args) {
