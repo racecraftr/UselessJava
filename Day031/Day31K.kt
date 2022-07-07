@@ -95,5 +95,7 @@ fun main(){
     val sc = Scanner(System.`in`)
     while (true){
         println("Enter an array.")
+        val s = sc.nextLine()
+        println(d.arrayType(s) + "\n")
     }
 }
