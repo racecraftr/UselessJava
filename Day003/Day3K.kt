@@ -3,22 +3,32 @@ package UselessJava.Day003
 import java.util.*
 
 class Day3K {
-    fun determineType(n: Double): String {
-        if(n.equals(n.toLong())){
-            val l: Long = n.toLong();
-            if(l == 0L || l == 1L){return "boolean";}
-            if(l >= Byte.MIN_VALUE && l <= Byte.MAX_VALUE){return "byte";}
-            if(l >= Short.MIN_VALUE && l <= Byte.MAX_VALUE){return "short";}
-            if(l >= Int.MIN_VALUE && l <= Int.MAX_VALUE){return "int";}
-            return "long";
+    fun determineType(n: Double): String? {
+        if (n.toLong().toDouble() == n) {
+            val i = n.toLong()
+            if (i == 0L || i == 1L) {
+                return "boolean"
+            }
+            if (i >= Byte.MIN_VALUE && i <= Byte.MAX_VALUE) {
+                return if (i >= 0) "unsigned_byte" else "byte"
+            }
+            if (i >= Short.MIN_VALUE && i <= Short.MAX_VALUE) {
+                return if (i >= 0) "unsigned_short" else "short"
+            }
+            if (i >= Int.MIN_VALUE && i <= Int.MAX_VALUE) {
+                return if (i >= 0) "unsigned_int" else "int"
+            }
+            return if (i >= 0) "unsigned_long" else "long"
         }
-        if(n >= Float.MIN_VALUE && n <= Float.MAX_VALUE){return "float";}
-        return "double"
+        if (n >= Float.MIN_VALUE && n <= Float.MAX_VALUE) {
+            return if (n >= 0) "unsigned_float" else "float"
+        }
+        return if (n >= 0) "unsigned_double" else "double"
     }
 
-    fun determineType(s: String): String{
+    fun determineType(s: String): String? {
         try{
-            val n = s.toDouble()
+            val n:Double = s.toDouble()
             return determineType(n);
         }
         catch (e: NumberFormatException){

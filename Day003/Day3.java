@@ -8,12 +8,27 @@ public class Day3 {
       if((long) (n) == n) {
          long i = (long) n;
          if(i == 0 || i == 1) {return "boolean";}
-         if(i >= Byte.MIN_VALUE && i <= Byte.MAX_VALUE) {return "byte";}
-         if(i >= Short.MIN_VALUE && i <= Short.MAX_VALUE) {return "short";}
-         if(i >= Integer.MIN_VALUE && i <= Integer.MAX_VALUE) {return "int";}
+         if(i >= Byte.MIN_VALUE && i <= Byte.MAX_VALUE) {
+            if(i >= 0) return "unsigned_byte";
+            return "byte";
+         }
+         if(i >= Short.MIN_VALUE && i <= Short.MAX_VALUE) {
+            if(i >= 0) return "unsigned_short";
+            return "short";
+         }
+         if(i >= Integer.MIN_VALUE && i <= Integer.MAX_VALUE) {
+            if(i >= 0) return "unsigned_int";
+            return "int";
+         }
+         if(i >= 0) return "unsigned_long";
          return "long";
       }
-      if(n >= Float.MIN_VALUE && n <= Float.MAX_VALUE) {return "float";}
+      
+      if(n >= Float.MIN_VALUE && n <= Float.MAX_VALUE) {
+         if(n >= 0) return "unsigned_float";
+         return "float";
+      }
+      if(n >= 0) return "unsigned_double";
       return "double";
    }
    
