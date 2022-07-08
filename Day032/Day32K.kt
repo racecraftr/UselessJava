@@ -6,9 +6,9 @@ import java.util.*
 class Day32K {
     fun weirdSort(s: String): String? {
         val strings = s.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-        val customStrings = arrayOfNulls<CustomString>(strings.size)
+        val customStrings = arrayOfNulls<CustomStringK>(strings.size)
         for (i in strings.indices) {
-            customStrings[i] = CustomString(strings[i])
+            customStrings[i] = CustomStringK(strings[i])
         }
         Arrays.sort(customStrings)
         return Arrays.toString(customStrings)
