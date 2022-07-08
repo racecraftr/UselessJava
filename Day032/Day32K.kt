@@ -25,7 +25,7 @@ internal class CustomStringK(var s: String) : Comparable<Any?> {
     }
 
     override operator fun compareTo(other: Any?): Int {
-        return value - (other as CustomString).value
+        return value - (other as CustomStringK).value
     }
 
     override fun toString(): String {
