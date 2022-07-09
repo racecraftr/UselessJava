@@ -50,3 +50,13 @@ class Day33K {
         }
     }
 }
+
+fun main(){
+    val d = Day33K()
+    val sc = Scanner(System.`in`)
+    while (true){
+        println("Enter a positive integer.")
+        val s = sc.nextLine();
+        println("${d.findPath(s)}\n")
+    }
+}
