@@ -15,7 +15,7 @@ a:visited {
     color: #a56eff;
 }
 
-code {
+pre code {
     font-family: 'Fira Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
     line-height: 1.5;
     color: #efefef;
