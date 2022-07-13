@@ -1,6 +1,6 @@
 function foo(){
 
-    const s = document.getElementById("stringInput").value;
+    const s = document.getElementById("input").value;
 
     var chars = s.toCharArray();
     Array.prototype.sort.call(chars);
