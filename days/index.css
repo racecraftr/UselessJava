@@ -14,3 +14,12 @@ h2 {
 a:visited {
     color: #a56eff;
 }
+
+pre code {
+    font-family: 'Fira Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #efefef;
+    background-color: #272530;
+    padding: 10px;
+}
