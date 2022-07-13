@@ -10,3 +10,7 @@ h2 {
     color: #efefef;
     font-weight: 400;
 }
+
+a:visited {
+    color: #a56eff;
+}
