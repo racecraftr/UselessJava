@@ -7,5 +7,5 @@ function redirect() {
     else if(day.length == 2) {
         s = "0" + day;
     }
-    window.location.href = "../days/Day" + s + "/web/Day" + day + ".html";
+    window.location.href = "Day" + s + "/web/Day" + day + ".html";
 }
