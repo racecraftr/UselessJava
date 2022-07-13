@@ -1,11 +1,10 @@
 function onButtonPressed(){
 
-    const s = document.getElementById("input").value;
+    var s = $("#input").val();
 
-    var chars = s.toCharArray();
+    var chars = Array.from(s)
     Array.prototype.sort.call(chars);
-    const res = Array.toString(chars);
+    const res = chars.join('')
     const output = document.getElementById("output");
-    output.innerHTML = "hello";
-    alert(res);
+    output.innerHTML = res.toString();
 }
