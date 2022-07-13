@@ -11,13 +11,18 @@ h2 {
     font-weight: 400;
 }
 
+a:link{
+  color: #009eff;
+}
+
 a:visited {
     color: #a56eff;
 }
 
-pre code {
+code {
     font-family: 'Fira Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
     line-height: 1.5;
+    font-size: 80%;
     color: #efefef;
     background-color: #202020;
     border: 1px solid #efefef;
