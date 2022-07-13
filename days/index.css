@@ -28,3 +28,13 @@ code {
     border: 1px solid #efefef;
     padding: 10px;
 }
+
+output {
+font-family: 'Fira Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
+    line-height: 1.5;
+    font-size: 80%;
+    color: #efefef;
+    background-color: #202020;
+    border: 1px solid #efefef;
+    padding: 10px;
+}
