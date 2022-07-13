@@ -1,4 +1,4 @@
-function foo(){
+function onButtonPressed(){
 
     const s = document.getElementById("input").value;
 
@@ -6,5 +6,6 @@ function foo(){
     Array.prototype.sort.call(chars);
     const res = Array.toString(chars);
     const output = document.getElementById("output");
-    output.innerHTML = res;
+    output.innerHTML = "hello";
+    alert(res);
 }

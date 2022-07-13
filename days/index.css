@@ -21,7 +21,6 @@ a:visited {
 
 code {
     font-family: 'Fira Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
-    line-height: 1.5;
     font-size: 80%;
     color: #efefef;
     background-color: #202020;
@@ -31,10 +30,15 @@ code {
 
 output {
 font-family: 'Fira Code', 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Liberation Mono', 'Courier New', monospace;
-    line-height: 1.5;
     font-size: 80%;
     color: #efefef;
     background-color: #202020;
     border: 1px solid #efefef;
     padding: 10px;
+}
+
+embed {
+  background: #cbccdd !important;
+  border-radius: 5px;
+  padding 10px;
 }
