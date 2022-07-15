@@ -1,4 +1,4 @@
-package UselessJava.days.Day038.images
+package UselessJava.days.Day038
 
 import java.awt.Color
 import java.io.File
