@@ -1,5 +1,7 @@
 package UselessJava.days.Day040
 
+import java.util.*
+
 class Day40K{
     @kotlin.jvm.Throws
     fun count(){
@@ -21,5 +23,7 @@ class Day40K{
 @kotlin.jvm.Throws
 fun main(){
     val d = Day40K()
+    val sc = Scanner(System.`in`)
+    val s = sc.nextLine()
     d.count()
 }

@@ -1,5 +1,7 @@
 package UselessJava.days.Day040;
 
+import java.util.Scanner;
+
 public class Day40 {
     public void count() throws InterruptedException {
         while(true){
@@ -18,6 +20,8 @@ public class Day40 {
     
     public static void main(String[] args) throws InterruptedException {
         Day40 d = new Day40();
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
         d.count();
     }
 }
