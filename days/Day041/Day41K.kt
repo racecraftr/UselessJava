@@ -14,16 +14,14 @@ class Day41K {
         }
         return res
     }
+}
 
-    companion object{
-        @JvmStatic fun main(){
-            val d = Day41K()
-            val sc = Scanner(System.`in`)
-            while (true){
-                println("Enter a string: ")
-                val s = sc.nextLine();
-                println(d.toUnicode(s) + "\n")
-            }
-        }
+fun main(){
+    val d = Day41K()
+    val sc = Scanner(System.`in`)
+    while (true){
+        println("Enter a string: ")
+        val s = sc.nextLine();
+        println(d.toUnicode(s) + "\n")
     }
 }
