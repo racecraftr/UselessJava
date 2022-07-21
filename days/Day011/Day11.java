@@ -61,7 +61,7 @@ public class Day11 {
       return madLibs(s, 1);
    }
    
-   private String getRandomLine(String path){
+   public String getRandomLine(String path){
       List<String> lines;
       try{
          lines = Files.readAllLines(Paths.get(path));
