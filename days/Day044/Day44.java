@@ -4,19 +4,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day44 {
-    public int[] randomPyTriple(){
+    public long[] randomPyTriple(){
         /*
         you can generate a random pythagorean triple by squaring a complex number.
         real and imaginary parts - legs
         absolute value - hypotenuse
          */
-        int real = (int)(Math.random() * 1000) + 1;
-        int imaginary = (int)(Math.random() * 1000) + 1;
+        long real = (long)(Math.random() * 1000) + 1;
+        long imaginary = (long)(Math.random() * 1000) + 1;
         
-        int leg1 = Math.abs(real * real - imaginary * imaginary);
-        int leg2 = Math.abs(2 * real * imaginary);
-        int hypo = (int)(Math.sqrt(leg1 * leg1  + leg2 * leg2));
-        return new int[]{leg1, leg2, hypo};
+        long leg1 = Math.abs(real * real - imaginary * imaginary);
+        long leg2 = Math.abs(2 * real * imaginary);
+        long hypo = (long)(Math.sqrt(leg1 * leg1  + leg2 * leg2));
+        return new long[]{leg1, leg2, hypo};
     }
     
     public static void main(String[] args) {

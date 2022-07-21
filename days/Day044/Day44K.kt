@@ -5,14 +5,14 @@ import kotlin.math.abs
 import kotlin.math.sqrt
 
 class Day44K {
-    fun randomPyTriple(): IntArray{
-        val real = (Math.random() * 1000).toInt() + 1
-        val imaginary = (Math.random() * 1000).toInt() + 1
+    fun randomPyTriple(): LongArray{
+        val real: Long = (Math.random() * 1000).toInt() + 1L
+        val imaginary: Long = (Math.random() * 1000).toInt() + 1L
 
-        val leg1 = abs(real * real - imaginary * imaginary)
-        val leg2 = abs(2 * real * imaginary)
-        val hypo =  sqrt((leg1 * leg1 + leg2 * leg2).toDouble()).toInt()
-        return intArrayOf(leg1, leg2, hypo)
+        val leg1: Long = abs(real * real - imaginary * imaginary)
+        val leg2: Long = abs(2 * real * imaginary)
+        val hypo: Long =  sqrt((leg1 * leg1 + leg2 * leg2).toDouble()).toLong()
+        return longArrayOf(leg1, leg2, hypo)
     }
 }
 
