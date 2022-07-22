@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Day11 {
    
-   final private String root = "days/Day011/wordLists";
+   final private String root = "days/Day011/wordLists/";
    
    public String madLibs(String s, int num) throws IOException {
       String[] words = s.split("[ \\t\\n]+");

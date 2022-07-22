@@ -6,8 +6,8 @@ import java.nio.file.Paths
 import java.util.*
 
 class Day11K {
-
-    private val root = "days/Day011/wordLists"
+    //Tonight on bottom gear...I <v> my car through a <n> <nl> Hammond puts a <n> on <n> <nl> and May <sv> a <n> in the middle of a <n>.
+    private val root = "days/Day011/wordLists/"
 
     @Throws(IOException::class)
     fun madLibs(s: String, num: Int): String? {
