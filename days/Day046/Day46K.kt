@@ -4,12 +4,12 @@ import java.util.*
 
 class Day46K {
     fun wordScroll(s: String){
-        val window = Math.max(5, s.length/2)
+        val window = 5.coerceAtLeast(s.length / 2)
         var start = -1 * window; var end = 0
         while(start <= s.length){
             var shown = s.substring(
-                Math.max(0, start),
-                Math.min(end, s.length)
+                0.coerceAtLeast(start),
+                end.coerceAtMost(s.length)
             )
             if(start < 0){
                 for(i in 0 until Math.abs(start)){
