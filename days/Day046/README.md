@@ -1,6 +1,6 @@
 ## Day 46: Word scroller
 Prints a string in a way that makes it look like the string is scrolling across the screen. For instance:
-```
+```java
                w
               wh
              wha
@@ -47,4 +47,5 @@ t me
  me
 me
 e
-```
+```  
+Blog post: **<https://medium.com/@savim2020/useless-java-day-46-8c2cd98eb6b8>**
