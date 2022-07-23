@@ -49,3 +49,4 @@ me
 e
 ```  
 Blog post: **<https://medium.com/@savim2020/useless-java-day-46-8c2cd98eb6b8>**
+Youtube vid: **<https://youtu.be/6GPpKk4GmMs>**
