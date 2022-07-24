@@ -32,7 +32,7 @@ class Day48K {
             for(i in 0 until n2){
                 res += "+"
             }
-            return "$res<-]>"
+            return "$res<-]>."
         }
 
         fun brainNum(s: String): String?{
