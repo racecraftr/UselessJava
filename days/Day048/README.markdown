@@ -15,4 +15,5 @@ num = 48
 num = 65
 +++++[>+++++++++++++<-]>.
 ```
-Blog post: **<https://medium.com/@savim2020/useless-java-day-48-8c1cd86acd73>**
+Blog post: **<https://medium.com/@savim2020/useless-java-day-48-8c1cd86acd73>**  
+Youtube vid with demo: **<https://youtu.be/uzbMkq0ogMQ>**
