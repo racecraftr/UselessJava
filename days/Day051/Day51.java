@@ -3,7 +3,7 @@ package UselessJava.days.Day051;
 import java.util.Scanner;
 
 public class Day51{
-    static String shuffle(String s){
+    private static String shuffle(String s){
         char[] chars = s.toCharArray();
         for(int i = 0; i < chars.length; i++) {
             int i1 = (int)(Math.random() * chars.length);

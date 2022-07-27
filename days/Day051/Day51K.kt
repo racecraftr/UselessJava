@@ -4,7 +4,7 @@ import java.util.*
 
 class Day51K{
     companion object{
-        fun shuffle (s: String): String{
+        private fun shuffle (s: String): String{
             val chars = s.toCharArray()
             for(i in chars.indices){
                 val i1 = (Math.random() * chars.size).toInt()
