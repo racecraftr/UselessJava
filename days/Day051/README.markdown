@@ -4,4 +4,5 @@ but the letters in  between are mixed around.
 
 You can still kinda make out what it is saying. 
 
-Blog post: **<https://medium.com/@savim2020/useless-java-day-51-51e9c0a378c>**
+Blog post: **<https://medium.com/@savim2020/useless-java-day-51-51e9c0a378c>**  
+Youtube vid: **<https://youtu.be/FXz6GHMEH_s>**
