@@ -8,4 +8,5 @@ To get points, you have to win rounds of _UNO_. **The points are determined by t
 
 Numbered cards give [Number on card] points.
 ```
-This program finds the *least* possible number of cards to get that amount of points in _UNO_. 
+This program finds the *least* possible number of cards to get that amount of points in _UNO_.  
+Blog post: **<https://medium.com/@savim2020/useless-java-day-52-fedb9f6c95d9>**
