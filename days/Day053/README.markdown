@@ -16,3 +16,4 @@ None of these words are "words," so to speak, but they are much more pronouncabl
 ```text
 sdjfoiwjheo igjsoacoisacgmirwhgoicmwrh
 ```
+Blog post: **<https://medium.com/@savim2020/useless-java-day-53-fb66b1648fa3>**
