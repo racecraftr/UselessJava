@@ -1,5 +1,7 @@
 package UselessJava.days.Day053;
 
+import java.util.Scanner;
+
 public class Day53 {
     
     static final char[] consonants = "wrtypsdfghjklzcvbnm".toCharArray();
@@ -20,10 +22,11 @@ public class Day53 {
         return c;
     }
     
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         while(true){
+            String s = sc.nextLine();
             System.out.println(makeWord());
-            Thread.sleep(1000);
         }
     }
 }

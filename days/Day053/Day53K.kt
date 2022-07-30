@@ -1,5 +1,7 @@
 package UselessJava.days.Day053
 
+import java.util.*
+
 class Day53K{
     companion object {
         @JvmStatic val consonants = "wrtypsdfghjklzcvbnm".toCharArray()
@@ -21,8 +23,9 @@ class Day53K{
 }
 
 fun main() {
+    val sc = Scanner(System.`in`)
     while (true){
+        val s = sc.nextLine()
         println(Day53K.makeWord())
-        Thread.sleep(1000)
     }
 }
