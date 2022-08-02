@@ -16,7 +16,7 @@ public class Day57 {
             System.out.println();
             for(int i = 0; i < (int)(Math.random() * 20) + 5; i++) {
                 System.out.println(faces[(int)(Math.random() * faces.length)]);
-                Thread.sleep((long)(Math.random() * 500) + 50);
+                Thread.sleep((long)(Math.random() * 2000) + 50);
             }
             System.out.println("\nOk, you win.");
         }

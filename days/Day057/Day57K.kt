@@ -17,7 +17,7 @@ fun main() {
         println()
         for (i in 0 until (Math.random() * 20).toInt() + 5) {
             println(Day57K.faces[(Math.random() * Day57K.faces.size).toInt()])
-            Thread.sleep((Math.random() * 500).toLong() + 50)
+            Thread.sleep((Math.random() * 2000).toLong() + 50)
         }
         println("\nOk, you win.")
     } while(input.lowercase() != "n")
