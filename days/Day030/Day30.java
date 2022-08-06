@@ -27,3 +27,9 @@ public class Day30 {
         }
     }
 }
+/*
+hello from vim! I made this comment using the vim editor on my 2017 Macbook pro. 
+Can't believe this works. It even has syntax hilighting! :D
+Gonna just.. chill for a bit in this. It's so interesting. 
+To exit vim, simply enter [esc] :wq 
+*/
