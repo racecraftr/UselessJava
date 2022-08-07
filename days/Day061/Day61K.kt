@@ -6,11 +6,11 @@ class Day61K {
         fun instaCrash(){
             val t = Thread(){
                 println("Fork bomb lol")
+		instaCrash()
             }
             val t1 = t;
             t.start()
             t1.start()
-            instaCrash()
         }
     }
 }
