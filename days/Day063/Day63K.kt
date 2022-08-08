@@ -1,7 +1,5 @@
 package UselessJava.days.Day063
 
-import java.util.Scanner
-
 class Day63K {
     companion object {
         fun isPalindrome(s: String): Boolean {
@@ -17,10 +15,9 @@ class Day63K {
 }
 
 fun main(){
-    val sc = java.util.Scanner(System.`in`)
     while(true){
         println("Enter a string: ")
-        val s = sc.nextLine()
+        val s = readLine()!!
         println(Day63K.isNotPalindrome(s))
     }
 }

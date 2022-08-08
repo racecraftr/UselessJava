@@ -9,3 +9,6 @@
 /template/
 /Create.kt
 *.jar
+*.class
+*.war
+*.kotlin_module
