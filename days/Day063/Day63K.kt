@@ -1,9 +1,11 @@
 package UselessJava.days.Day063
 
+import java.util.Scanner
+
 class Day63K {
     companion object {
         fun isPalindrome(s: String): Boolean {
-            val s1 = s.toLowerCase()
+            val s1 = s.lowercase()
             val s2 = s1.replace("[^a-zA-Z0-9]".toRegex(), "")
             return s2 == s2.reversed()
         }
@@ -15,7 +17,7 @@ class Day63K {
 }
 
 fun main(){
-    val sc = Scanner(System.`in`)
+    val sc = java.util.Scanner(System.`in`)
     while(true){
         println("Enter a string: ")
         val s = sc.nextLine()
