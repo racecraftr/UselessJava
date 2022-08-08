@@ -1,4 +1,5 @@
 # Day 62: AMOGUS
 Inputs a string and prints out the equivalent [AMONGUSISABIGSUSSYBAKAHAHAHAHAHATHISLANGUAGEISREALLYCOOLPLEASEUSEITMYLIFEDEPENDSONITORELSEPLSPLSPLSPLSPLSPLSPLSkahyghdfhm](https://esolangs.org/wiki/AMONGUSISABIGSUSSYBAKAHAHAHAHAHATHISLANGUAGEISREALLYCOOLPLEASEUSEITMYLIFEDEPENDSONITORELSEPLSPLSPLSPLSPLSPLSPLSkahyghdfhm) program to output that string.  
 >*sus*  
-Blog post: **<https://medium.com/@savim2020/useless-java-day-62-282d30b5c562>**
+Blog post: **<https://medium.com/@savim2020/useless-java-day-62-282d30b5c562>**  
+Youtube vid: **<https://youtu.be/UYajw8bfF1M>**
