@@ -14,9 +14,9 @@ class Day63K {
     }
 }
 
-fun main(){
-    while(true){
-        println("Enter a string: ")
+fun main() {
+    while (true) {
+        println("Enter a string.")
         val s = readLine()!!
         println(Day63K.isNotPalindrome(s))
     }
