@@ -42,3 +42,12 @@ embed {
   border-radius: 5px;
   padding: 10px;
 }
+
+.output {
+  background: #202020 !important;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Monaco', 'Courier new', monospace;
+  overflow-wrap: break-word;
+  font-weight: 100;
+}
