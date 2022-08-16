@@ -1,31 +1,48 @@
-<html>
+let barLengths = [];
+let stopped = false;
 
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="index.js"></script>
-  <link rel="stylesheet" href="../../index.css">
+function init() {
+  barLengths = [];
+  let x = parseInt(
+    Math.random() * 64, 10
+  )
+  for (let i = 0; i < 10; i++) {
+    barLengths.push(x);
+    x += parseInt(Math.random() * 10, 10) - 5
+    if (x < 1) x = 1;
+  }
+}
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCWK39E22K"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+async function shuffle() {
+  for (let i = 0; i < barLengths.length; i++) {
+    let x = barLengths[i];
+    x += parseInt(Math.random() * 10 - 5, 10)
+    if (x < 1) x = 1;
+    barLengths[i] = x;
+  }
+}
 
-    gtag('config', 'G-XCWK39E22K');
-  </script>
-</head>
+async function foo() {
+  init();
+  stopped = false;
+  while (!stopped) {
+    let output = "";
+    for (let i = 0; i < barLengths.length; i++) {
+      for (let j = 0; j < barLengths[i]; j++) {
+        output += "█"
+      }
+      output += "<br>"
+    }
+    document.getElementById("output").innerHTML = output;
+    await sleep(100);
+    shuffle();
+  }
+}
 
-<body>
-  <h1>
-    Day
-    <a href="https://github.com/racecraftr/UselessJava/tree/main/days/Day048"> [View on github] </a>
-    <a href="https://useless.hackerlog.dev"> [Return home] </a>
-  </h1>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-  <div class = "output", id = "output">
-    
-  </div>
-</body>
-
-</html>
+function stop() {
+  stopped = true;
+}
