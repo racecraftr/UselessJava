@@ -1,48 +1,60 @@
-let barLengths = [];
-let stopped = false;
-
-function init() {
-  barLengths = [];
-  let x = parseInt(
-    Math.random() * 64, 10
-  )
-  for (let i = 0; i < 10; i++) {
-    barLengths.push(x);
-    x += parseInt(Math.random() * 10, 10) - 5
-    if (x < 1) x = 1;
+/*
+JsNode class: represents a node in a binary tree. 
+*/
+class JsNode {
+  constructor(c) {
+    this.c = c;
+    this.left = null;
+    this.right = null;
   }
-}
 
-async function shuffle() {
-  for (let i = 0; i < barLengths.length; i++) {
-    let x = barLengths[i];
-    x += parseInt(Math.random() * 10 - 5, 10)
-    if (x < 1) x = 1;
-    barLengths[i] = x;
-  }
-}
-
-async function foo() {
-  init();
-  stopped = false;
-  while (!stopped) {
-    let output = "";
-    for (let i = 0; i < barLengths.length; i++) {
-      for (let j = 0; j < barLengths[i]; j++) {
-        output += "█"
+  add(c) {
+    c += "";
+    if (c.localeCompare(this.c) < 0) {
+      if (this.left == null) {
+        this.left = new JsNode(c);
       }
-      output += "<br>"
+      else {
+        this.left.add(c)
+      }
     }
-    document.getElementById("output").innerHTML = output;
-    await sleep(100);
-    shuffle();
+
+    else {
+      if (this.right == null) {
+        this.right = new JsNode(c);
+      }
+      else {
+        this.right.add(c);
+      }
+    }
   }
+
+  static maxDepth(node) {
+    if (node == null) {
+      return -1;
+    }
+    let lDepth = this.maxDepth(node.left);
+    let rDepth = this.maxDepth(node.right);
+
+    if (lDepth > rDepth) {
+      return lDepth + 1;
+    }
+    else {
+      return rDepth + 1;
+    }
+  }
+
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+function foo() {
+  let input = document.querySelector("input").value;
 
-function stop() {
-  stopped = true;
+  let chars = input.split("");
+  let root = new JsNode(chars[0]);
+  for (let i = 1; i < chars.length; i++) {
+    root.add(chars[i]);
+  }
+
+  let output = "" + JsNode.maxDepth(root);
+  document.getElementById("output").innerHTML = `This string is ${output} depths deep.`;
 }
