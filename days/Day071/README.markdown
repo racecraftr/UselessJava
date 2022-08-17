@@ -54,3 +54,5 @@ class Node {
   }
 }
 ```
+Blog post: **<https://medium.com/@savim2020/useless-java-day-71-a3297dffdde3>**  
+Youtube vid: **<https://youtu.be/tV9LqjowxBs>**
