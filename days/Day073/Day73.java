@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Day73 {
   static String[] emojis =
-          "\uD83E\uDD70 \uD83D\uDE0D \uD83E\uDD29 \uD83D\uDE18 \uD83D\uDE17 \uD83E\uDD11 \uD83E\uDD17 \uD83E\uDD75 \uD83D\uDE31 \uD83D\uDC9D \uD83D\uDC95 \uD83D\uDC4B \uD83D\uDE4B\u200D\u200D \uD83D\uDE4B\u200D\u200D"
+          "\uD83E\uDD70 \uD83D\uDE0D \uD83E\uDD29 \uD83D\uDE18 \uD83D\uDE17 \uD83E\uDD11 \uD83E\uDD17 \uD83E\uDD75 \uD83D\uDE31 \uD83D\uDC9D \uD83D\uDC95 \uD83D\uDC4B \uD83D\uDE4B\u200D\u200D"
                   .split(" ");
   static String mlm(String s){
     /* for context, mlm does NOT mean "men loving men"
