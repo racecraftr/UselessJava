@@ -15,7 +15,7 @@ public class Day75 {
     while(d >= 1000 && magnitude <= 3){
       magnitude ++;
       d /= 1000.0;
-    }
+    } 
     
     String magString = "B";
     switch(magnitude) {
