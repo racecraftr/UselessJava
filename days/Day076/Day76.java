@@ -49,6 +49,7 @@ public class Day76 {
       }
       i++;
       if(i > 9){
+        i = 0;
         res += "\n";
       }
     }

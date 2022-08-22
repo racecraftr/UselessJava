@@ -19,9 +19,9 @@ public class Day75 {
     
     String magString = "B";
     switch(magnitude) {
-      case 1 -> magString = "KB";
-      case 2 -> magString = "MB";
-      case 3 -> magString = "GB";
+      case 1 : magString = "KB"; break;
+      case 2 : magString = "MB"; break;
+      case 3 : magString = "GB"; break;
     }
     
     return String.format("%.2f", d) + " " + magString;
