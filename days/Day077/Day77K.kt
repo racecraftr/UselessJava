@@ -6,7 +6,7 @@ class Day77K {
   companion object{
     @JvmStatic fun isIpAddress(s: String): Boolean {
       val s1 = s.uppercase()
-      if(s1.matches(Regex("((\\d{1,3})\\.){3}\\2"))) {
+      if(s1.matches(Regex("((\\d{1,3})\\.){3}\\d{1,3}"))) {
         val strings = s1.split(Regex("\\."));
 
         for (string in strings) {
@@ -22,7 +22,7 @@ class Day77K {
         return true
       }
 
-      else if(s1.matches(Regex("(([\\dA-F]{1,4}):){7}\\2"))) {
+      else if(s1.matches(Regex("(([\\dA-F]{1,4}):){7}([\\dA-F]{1,4})"))) {
         val strings = s1.split(":")
 
         for (string in strings) {

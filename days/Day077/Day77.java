@@ -6,7 +6,7 @@ public class Day77 {
   static boolean isIpAddress(String s){
     String s1 = s.toUpperCase();
     s1 = s1.replaceAll("[ \\t]", "");
-    if(s1.matches("((\\d{1,3})\\.){3}\\2")){
+    if(s1.matches("((\\d{1,3})\\.){3}\\d{1,3}")){
       String[] strings = s1.split("\\.");
       
       for(String string : strings) {
@@ -22,7 +22,7 @@ public class Day77 {
       return true;
     }
     
-    else if(s1.matches("(([\\dA-F]{1,4}):){7}\\2")) {
+    else if(s1.matches("(([\\dA-F]{1,4}):){7}([\\dA-F]{1,4})")) {
       String[] strings = s1.split(":");
   
       for(String string : strings) {
