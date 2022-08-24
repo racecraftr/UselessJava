@@ -29,8 +29,7 @@ class Day78K {
         keys[(Math.random() * Day78.keys.size).toInt()][(Math.random() * Day78.keys[0].size).toInt()]
       var charFound = false
       if(s[i] == ' '){
-        wrongChar = ' '
-        charFound = true
+        return
       }
       for (row in keys.indices) {
         if (charFound) {

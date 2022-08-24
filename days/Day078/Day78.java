@@ -34,8 +34,7 @@ public class Day78 {
     char wrongChar = keys[(int) (Math.random() * keys.length)][(int) (Math.random() * keys[0].length)];
     boolean charFound = false;
     if(s.charAt(i) == ' '){
-      wrongChar =' ';
-      charFound = true;
+      return;
     }
     for(int row = 0; row < keys.length; row++) {
       if(charFound) {
