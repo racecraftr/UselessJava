@@ -9,3 +9,5 @@ Use WASD to move up, right, down, left.
 Use [space] to type a space.
 Use : to output the current character.
 ```
+Blog post: **<https://medium.com/@savim2020/useless-java-day-79-70471f80ddc0>**  
+Youtube vid: **<https://youtu.be/UXPAAFNZA3A>**
