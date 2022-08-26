@@ -13,26 +13,26 @@ class Day79K {
       var res = ""
       var row = 0
       var col = 0
-      for (i in 0 until s.length) {
+      for (i in s.indices) {
         when (s[i]) {
           'w' -> {
             row--
-            row = Math.max(0, row)
+            row = 0.coerceAtLeast(row)
           }
 
           'a' -> {
             col--
-            col = Math.max(0, col)
+            col = 0.coerceAtLeast(col)
           }
 
           's' -> {
             row++
-            row = Math.min(Day79.keys.size - 1, row)
+            row = (Day79.keys.size - 1).coerceAtMost(row)
           }
 
           'd' -> {
             col++
-            col = Math.min(Day79.keys[row].size - 1, col)
+            col = (Day79.keys[row].size - 1).coerceAtMost(col)
           }
 
           ' ' -> {
