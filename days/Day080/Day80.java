@@ -4,16 +4,12 @@ import java.util.Scanner;
 
 public class Day80 {
   
-  static int[] inverted = {
-          9, 8, 7, 6, 5, 4, 3, 2, 1, 0
-  };
-  
   static int doubleInvertNumber(int x) {
     boolean isNegative = x < 0;
-    if(isNegative) x *= -1;
+    x = Math.abs(x);
     int temp = 0;
     while(x > 0){
-      temp += inverted[x % 10];
+      temp += 9 - (x % 10);
       x /= 10;
       temp *= 10;
     }
