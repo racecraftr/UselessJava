@@ -10,7 +10,7 @@ class Day82K {
       var res = ""
       val root = Math.sqrt(s.length.toDouble()).toInt()
       var x = 0
-      for (i in 0 until s.length) {
+      for (i in s.indices) {
         res += s[i].toString() + "\t"
         x++
         if (x == root) {

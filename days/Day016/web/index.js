@@ -1,5 +1,6 @@
 function foo () {
-    var test = $('#input');
+    let a = $('#input');
+    var test = a.toLowerCase();
     test = test.replaceAll("\n", "");
     var rickroll = "nevergonnagiveyouup";
     var regex = "(.*";

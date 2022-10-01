@@ -47,7 +47,7 @@ class JsNode {
 }
 
 function foo() {
-  let input = document.querySelector("input").value;
+  let input = $("#input").val();
 
   let chars = input.split("");
   let root = new JsNode(chars[0]);
