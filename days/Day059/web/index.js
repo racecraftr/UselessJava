@@ -1,7 +1,7 @@
 const keys = [
     "asdfjkl; ",
       "qwertyuiopghzxcvbnm,.['/ASDFJKL:",
-      "QWERTYUIOPGHZXCVBNM<>\"?1234567890-]",
+      "QWERTYUIOPGHZXCVBNM<>\"?1234567890-]\n",
       "]`!@#$%^&*()=!@#$%^&*()_",
       "\\~",
       "|"

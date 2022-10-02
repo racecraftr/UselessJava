@@ -50,6 +50,13 @@ embed {
   padding: 10px;
 }
 
+button {
+  color: black;
+  background-color: rgb(121, 121, 121);
+  border-color: transparent;
+  border-radius: 5px;
+}
+
 .output {
   background: #202020 !important;
   border-radius: 5px;
@@ -63,4 +70,8 @@ embed {
   width: 320px;
   height: 200px;
   overflow-wrap: break-word;
+  background-color: #303030;
+  color: white;
+  border-color: transparent;
+  border-radius: 5px;
 }
