@@ -10,5 +10,6 @@ function agressiveEcho(){
             res += chars[i];
         }
     }
-    $("#output").text(res);
+    res = res.replaceAll('/\n/gi', '<br>')
+    $("#output").html(res);
 }

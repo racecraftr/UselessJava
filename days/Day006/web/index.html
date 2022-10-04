@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -13,13 +14,15 @@
   gtag('config', 'G-XCWK39E22K');
 </script>
     </head>
-    <body>
-        <h1>Day 4 <a href = "https://github.com/racecraftr/UselessJava/tree/main/days/Day004"> [View on github] </a> 
+    <body onload="init()">
+        <h1>Day 6 <a href = "https://github.com/racecraftr/UselessJava/tree/main/days/Day006"> [View on github] </a> 
             <a href="https://useless.hackerlog.dev"> [Return home] </a></h1>
-        <h2>Takes a string and returns it as AlTeRcAsE.</h2>
+        <h2>Takes in a string and makes it an acronym for something.</h2>
         <div id = "inputs">
-            Enter a string: <p></p> <textarea id = "input" class="longTextInput"></textarea> <p></p> <button onclick="agressiveEcho();">WhAt dId yOu sAy tO Me?</button><br>
+            Enter a string:<p></p> 
+            <textarea id = "input" class="longTextInput"></textarea><p></p> 
+            <button onclick="foo()">Create acronym</button>
         </div>
-        <p id = "output" class = "output"></p>
+         <div id = "output" class = "output"></div>
     </body>
 </html>
