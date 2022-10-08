@@ -31,7 +31,7 @@ public class Day3 {
       if(n >= 0) return "unsigned_double";
       return "double";
    }
-   
+      
    
    public String determineType(String s) throws NumberFormatException {
       try {

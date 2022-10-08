@@ -1,5 +1,5 @@
 function foo(){
-    let input = document.getElementById("input").value;
-
-    document.getElementById("output").innerHTML = "";
+    let input = $("#input").val();
+	
+	$("#output").html(input);
 }

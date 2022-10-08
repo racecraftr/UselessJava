@@ -51,6 +51,7 @@ embed {
 
 button {
   color: black;
+  font-family: 'Roboto Mono', monospace;
   background-color: rgb(195, 195, 195);
   border-color: transparent;
   border-radius: 5px;
@@ -74,4 +75,37 @@ button {
   color: white;
   border-color: transparent;
   border-radius: 5px;
+}
+
+.shortTextInput{
+  font-family: 'Roboto Mono', monospace;
+  overflow-wrap: break-word;
+  background-color: #303030;
+  color: white;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+.numberInput{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px;
+  font-weight: 100;
+
+  overflow-wrap: break-word;
+
+  background-color: #303030;
+  color: white;
+
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
